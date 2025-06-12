@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Joguinho</title>
+    <style>
+      @keyframes pipeAnimation {
+        from {
+          right: -140px;
+        }
+        to {
+          right: 100%;
+        }
+      }
+
+      .animate-pipe {
+        animation: pipeAnimation 1.5s linear infinite;
+        animation-delay: 0s;
+        animation-fill-mode: backwards;
+      }
+
+      .animate-pipe-2 {
+        animation: pipeAnimation 1.5s linear infinite;
+        animation-delay: 2s;
+        animation-fill-mode: backwards;
+      }
+
+      /* .animate-pipe-3 {
+        animation: pipeAnimation 4s linear infinite;
+        animation-delay: 4s;
+        animation-fill-mode: backwards;
+      } */
+
+      @keyframes cloudAnimation {
+        from {
+          right: -300px;
+        }
+        to {
+          right: 100%;
+        }
+      }
+
+      .frase{
+        top: 250px;
+        animation: cloudAnimation 10s linear infinite;
+        animation-delay: 2s;
+      }
+
+      .frase2{
+        top: 250px;
+        animation: cloudAnimation 10s linear infinite;
+        animation-delay: 4s;
+      }
+
+      .frase3{
+        top: 250px;
+        animation: cloudAnimation 10s linear infinite;
+        animation-delay: 6s;
+      }
+
+      .animate-cloud {
+        position: absolute;
+        top: 50px; /* ajuste conforme necessário */
+        width: 200px;
+        height: 100px;
+        opacity: 0.7;
+        animation: cloudAnimation 10s linear infinite;
+        animation-delay: 2s;
+      }
+
+      .animate-cloud-2 {
+        animation-delay: 4s;
+        animation-fill-mode: backwards;
+      }
+
+      .animate-cloud-3 {
+        animation-delay: 6s;
+        animation-fill-mode: backwards;
+      }
+
+      @keyframes jump {
+        0% {
+          bottom: 0;
+        }
+        30% {
+          bottom: 180px;
+        }
+        70% {
+          bottom: 180px;
+        }
+        100% {
+          bottom: 0;
+        }
+      }
+
+      .jump {
+        animation: jump 500ms ease-out infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="bg-music" class="m-auto" controls autoplay loop>
+      <source src="assets/Delayed Baggage - Ryan Stasik.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div
+      class="p-0 m-0 box-border w-[80%] h-[80vh] rounded m-auto mt-5 relative overflow-hidden"
+    >
+      <h1 class="absolute z-12 text-blue-200 text-2xl frase">Eu te amooooooooooo</h1>
+      <h1 class="absolute z-12 text-blue-200 text-2xl frase2">Minha princesa linda</h1>
+      <h1 class="absolute z-12 text-blue-200 text-2xl frase3">Você é tudo pra mim</h1>
+      <img
+        src="img/Justin Cyr.gif"
+        class="absolute -bottom-3 w-[100%]"
+      />
+      <img
+        src="img/clouds.png"
+        class="absolute top-10 w-[500px] animate-cloud"
+      />
+      <img
+        src="img/clouds.png"
+        class="absolute top-10 w-[500px] animate-cloud animate-cloud-2"
+      />
+      <img
+        src="img/clouds.png"
+        class="absolute top-10 w-[500px] animate-cloud animate-cloud-3"
+      />
+      <img
+        src="img/girl-run-unscreen.gif"
+        class="love absolute bottom-7 w-[160px] z-10 bg-transparent"
+      />
+      <!-- <img
+        src="img/cacto.png"
+        class="cacto absolute bottom-6 w-[130px] animate-pipe"
+      /> -->
+      <img
+        src="img/cacto2.png"
+        class="cacto2 absolute bottom-12 w-[140px] animate-pipe-2"
+      />
+      <!-- <img
+        src="img/pipe.png"
+        class="absolute bottom-6 w-[80px] animate-pipe-3"
+      /> -->
+    </div>
+  </body>
+</html>
