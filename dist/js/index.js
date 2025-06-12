@@ -21,7 +21,7 @@ let loop = setInterval(() => {
         cacto2.style.left = `${cacto2Position}px`;
         love.style.animation = "none";
         love.style.bottom = `${lovePosition}px`;
-        love.src = "img/girl_pixel_art_death.gif";
+        love.src = "dist/img/girl_pixel_art_death.gif";
         love.style.width = "160px";
         clearInterval(loop);
     }
